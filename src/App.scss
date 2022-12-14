@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
 *{
     scroll-behavior: smooth !important;
+ }
+ .slide1, .slide2, .slide3{
+    width: 100%;
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
  }
 body{
     background-image: url('./images/header.jpeg');
@@ -120,13 +130,18 @@ body{
         background-color: lightcoral
     }
 }
-.title--button--container{
-    padding: .5rem;
-    font-family: 'Manrope';
-    font-size: 1.5rem;
-    .title__button{
-        color: whitesmoke;
-        width: 100%;
+.switch--button--container{
+    display: flex;
+    flex-direction: row;
+    .title--button--container{
+        font-family: 'Manrope';
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin-top: .5rem;
+        .title__button{
+            color: whitesmoke;
+            width: 100%;
+        }
     }
 }
 .switch-button {
@@ -178,10 +193,10 @@ body{
             font-size: 4rem;
             padding: 1rem;
             background-color: rgb(45, 44, 44);
-            border-top-left-radius: 200px;
-            border-top-right-radius: 200px;
-            border-bottom-left-radius: 200px;
-            border-bottom-right-radius: 200px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
     }
     
@@ -250,67 +265,6 @@ body{
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: 10px;
-        }
-    }
-}
-.testimonials--section{
-    display: flex;
-    height: 100%;
-    padding: 5rem;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(45, 44, 44);
-    margin-bottom: 5rem;
-    border-radius: 20px;
-    .testimonials__title{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: 10rem;
-        align-items: center;
-        color: whitesmoke;
-        margin-bottom: 4rem;
-        .title{
-            font-size: 4rem;
-        }
-        .subtitle{
-            font-size: 3rem;
-        }
-    }
-    .user__card{
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-        align-items: center;
-        .user__name__section{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            width: 100%;
-            color: whitesmoke;
-            .stars__section{
-                font-size: 1.5rem;
-                margin-top: 1.5rem;
-                .checked {
-                    color: orange;
-                }
-            }
-        }
-        .comments__section{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            .user__image{
-                width: 7rem;
-                border-radius: 100px;
-                margin-right: 2rem;
-            }
-            .user__comments{
-                color: whitesmoke;
-                font-family: 'La Belle Aurore';
-                font-size: 2rem;
-            }
         }
     }
 }
@@ -475,6 +429,168 @@ footer{
   --_p: 100%;
   --_s: .3s;
 }
+/*-----------------carousel-----------------*/
+section {
+	display:flex;
+	flex-flow:column;
+	align-items:center;
+	div.container {
+		transition:all .3s ease;
+		h1{ 
+            margin:15px 0 0 0; 
+        }
+		h3{ 
+            margin:0 0 25px 0; 
+        }
+	}
+	@media (max-width:992px){ 
+        padding:0 20px 0 20px; 
+    }
+}
+section.slide-option{
+	margin:0 0 50px 0;
+	.no-marg{ 
+        margin:0 0 0 0; 
+    }
+}
+div.highway-slider{
+	display:flex;
+	justify-content:center;
+	width:80%;
+	height: 30rem;
+	div.highway-barrier{
+		overflow:hidden;
+		position:relative;
+	}
+	ul.highway-lane{
+		display:flex;
+		height:100%;
+		li.highway-car{
+			flex:1;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			background:#fff;
+			color:#343434;
+            .user__card{
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                justify-content: center;
+                align-items: center;
+                .user__name__section{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    color: whitesmoke;
+                    margin-bottom: 1rem;
+                    .stars__section{
+                        font-size: 1.5rem;
+                        margin-top: .9rem;
+                        display: flex;
+                        justify-content: space-between;
+                        .checked {
+                            color: orange;
+                        }
+                    }
+                }
+                .comments__section{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .user__image{
+                        width: 9rem;
+                        border-radius: 100px;
+                        margin-bottom: 2rem;
+                    }
+                    .user__comments{
+                        color: whitesmoke;
+                        font-family: 'La Belle Aurore';
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .logo{
+                background: url('./images/logo.jpeg');
+                height: 8rem;
+                width: 8rem;
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin-left: 2rem;
+                border-radius: 100px;
+            }
+            
+		}
+	}
+}
+@keyframes translatestf{
+	0%{ 
+        transform:translateX(100%);  
+    }
+	100%{ 
+        transform:translateX(-500%);  
+    }
+}
+#stffull div.highway-barrier{
+	ul.highway-lane{
+		width:500%;
+		li.highway-car{
+			animation:translatestf 30s linear infinite;
+			h4 { 
+                font-size:28px; 
+            }
+		}
+	}
+}
+@keyframes translateinfinite{
+	100%{ 
+        transform:translateX(calc(-180px * 12));  
+    }
+}
+#infinite div.highway-barrier{
+	background:#fff;
+	box-shadow:0 3px 10px -3px rgba(0,0,0,0.3);
+	&::before,
+	&::after{
+		content: " ";
+		position:absolute;
+		z-index:9;
+		width:180px;
+		height:100%;	
+	}
+	&::before{
+		top:0;left:0;
+		background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	}
+	&::after{
+		top:0;right:0;
+		background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	}
+	ul.highway-lane{
+		width:calc(180px * 24);
+		li.highway-car{
+			width:180px;
+			animation:translateinfinite 25s linear infinite;
+			span.fab{
+				font-size:65px;
+			}
+		}
+	}
+}
+
+#red{ 
+    background: #cb5454; 
+}
+#orange{ 
+    background: #cb8054; 
+}
+#yellow { background: #cbba54; }
+#green { background: #69b46e; }
+#blue { background: #6091b0; }
+
+
 @media (max-width: 2024px){
     .about--us--section{
         h3{
@@ -560,20 +676,19 @@ footer{
             background-image: url('./images/logo.jpeg');
             background-size: contain;     
             background-repeat: no-repeat;
-            padding: 1rem;
-            width: 1rem;
+            padding: .5rem;
             margin-left: 1rem;
-            height: 3rem;
-            width: 3rem;
+            height: 2rem;
+            width: 2rem;
         }
         .menu-button-container{
             display: flex;
         }
         .menu{
             position: absolute;
-            top: 7rem;
+            top: 3.5rem;
             margin-top: 5rem;
-            left: 5.7rem;
+            left: 6rem;
             flex-direction: column;
             width: 100%;
             justify-content: center;
@@ -624,7 +739,33 @@ footer{
     .service--section{
         padding: 1rem;
     }
-}
+        div.highway-slider{
+            height: 30rem;
+                ul.highway-lane{
+                    li.highway-car{
+                        .user__card{
+                            
+                            .user__name__section{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            .comments__section{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                .user__comments{
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            
+        }
+
+    }
+
 @media (max-width: 600px){
     .switch--button--container{
         display: flex;
@@ -652,7 +793,7 @@ footer{
             }
         }
         h3{
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
         .about__us__info{
             font-size: 1.5rem;
@@ -673,27 +814,6 @@ footer{
     }
     .header--container{
         display: none;
-    }
-    .testimonials--section{
-        padding: 0rem;
-        .testimonials__title{
-            margin-bottom: -1rem;
-            .title{
-                font-size: 2rem;
-            }
-            .subtitle{
-                font-size: 1.5rem;
-            }
-        }
-        .user__card{
-            .comments__section{
-                flex-direction: column;
-                .user__comments{
-                    font-size: 1.5rem;
-                    margin-top: 1rem;
-                }
-            }
-        }
     }
     .feedback--form{
         .form--container{
@@ -731,7 +851,7 @@ footer{
         border-bottom-left-radius: 200px;
         border-bottom-right-radius: 200px;   
         color: #FFF;
-        height: 5.5rem;
+        height: 2rem;
         padding: 1em;           
     }
     .menu {
@@ -785,6 +905,33 @@ footer{
         margin-top: 0px;
         transform: rotate(-405deg);
     }
+    .switch--button--container{
+        padding: 1rem;
+        height: 1rem;
+        .title--button--container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0rem;
+            .title__button{
+                font-size: 1rem;
+            }
+        }
+        .switch-button{
+            .switch-button__checkbox{
+                width: 1rem;
+            }
+            .switch-button__label{
+                height: 1.5rem;
+                width: 3.4rem;
+            }
+            
+        }
+    }
+    .switch-button .switch-button__label:before {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
 @media (min-width: 601px){
     .hamburguer--container{
@@ -804,14 +951,16 @@ footer{
             }
         }
     }
-    .testimonials--section{
-        .user__card{
-            .user__name__section{
-                flex-direction: column;
-                align-items: center;
-                justify-content: none;
-                margin-bottom: 1rem;
-            }
+    div.highway-slider{
+        height: 44rem;
+        li.highway-car{
+            padding: 1rem;
+        }
+        .logo__container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
     }
     .feedback--form{
@@ -834,13 +983,36 @@ footer{
 @supports (-webkit-touch-callout: none) {
     /* CSS specific to iOS devices */ 
     @media (max-width: 500px){
-        .primary{
-            font-size: 5rem;
-            margin-top: -65%;
+        .button--top{
+            right: 1rem;
         }
-        footer{
-            .footer__link{
-                line-height: .5rem;
+        .button--top.show{
+            .primary{
+                font-size: 5rem;
+                margin-left: 10%;
+                margin-top: -50%;
+            }
+        }
+        div.highway-slider{
+            height: 46rem;
+            li.highway-car{
+                padding: 1rem;
+            }
+            .logo__container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .feedback--form{
+            .form--container{
+                .rating--container{
+                    width: 100%;
+                    .stars__section{
+                        font-size: 1rem;
+                    }
+                }
             }
         }
     }

@@ -12,6 +12,7 @@ const AboutUs = () => {
                     Ten years of experience and more than 200 happy customers monthly endorse our service. Best in town! If you don't believe us, we dare you to come and check it by yourself.
                 </span>
             </div>
+            
         </>
     );
 };
