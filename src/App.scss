@@ -100,6 +100,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     padding: 1rem;
     background-color: rgb(45, 44, 44);
     opacity: 0.8;
@@ -688,7 +689,7 @@ div.highway-slider{
             position: absolute;
             top: 3.5rem;
             margin-top: 5rem;
-            left: 6rem;
+            left: 12rem;
             flex-direction: column;
             width: 100%;
             justify-content: center;
@@ -764,8 +765,7 @@ div.highway-slider{
             
         }
 
-    }
-
+}
 @media (max-width: 600px){
     .switch--button--container{
         display: flex;
@@ -939,6 +939,11 @@ div.highway-slider{
     }
 }
 @media (max-width: 500px){
+    .hamburguer--container{
+        .menu{
+            left: 9rem;
+        }
+    }
     .service--section{
         .shaving--container{
             .shaving__image{
@@ -980,16 +985,85 @@ div.highway-slider{
         }
     }
 }
+@media (max-width: 400px){
+    .hamburguer--container{
+        .menu{
+            left: 6rem;
+        }
+    }
+}
 @supports (-webkit-touch-callout: none) {
     /* CSS specific to iOS devices */ 
-    @media (max-width: 500px){
+    @media (max-width: 850px){  //landscape mode
         .button--top{
-            right: 1rem;
+            right: 3rem;
+            width: 2rem;
+            .text{
+                left: 0%;
+            }
+        }
+        .button--top.show{
+            .primary{
+                margin-top: -80%;
+                margin-left: 0%;
+                margin-right: 405%;                                
+                font-size: 7rem;
+            }
+        }
+        .header--container{
+            height: 1.5rem;
+            .logo{
+                width: 2.5rem;
+                height: 2.5rem;
+                background-size: cover;
+                border: solid 2px rgb(45, 44, 44);
+                border-radius: 100px;
+                background-image: url('./images/logo.jpeg');            }
+        }
+        .about--us--section{
+            .title--container{
+                .title{
+                    padding: 2.5rem;
+                    width: 85%;
+                    font-size: 2rem;
+                }
+            }
+            h3{
+                font-size: 1.5rem;
+            }
+            .about__us__info{
+                font-size: 1.5rem;
+            }
+        }
+        .feedback--form{
+            .form--container{
+                .rating--container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    .stars__section{
+                        font-size: 1.5rem;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 400px){  //vertical mode
+        .hamburguer--container{
+            .menu{
+                left: 7rem;
+            }
+        }
+        .button--top{
+            right: 2rem;
         }
         .button--top.show{
             .primary{
                 font-size: 5rem;
-                margin-left: 10%;
+                margin-left: 15%;
                 margin-top: -50%;
             }
         }
