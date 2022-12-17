@@ -1,7 +1,7 @@
 Barbershop site
 
 Single barbershop site with 4 sections and contact form to receive possible schedules and feedback. Users got the chance to rate the service. 
-Dark & light mode button to change the front colours. Infinite dinamic carousel showing the users reviews. Developed with HTML, styled with Sass, Javascript, BEM methodology and React. Deployed with Firebase. Fully responsive.
+Dark & light mode button to change the front colors. Infinite dynamic carousel showing the users reviews. Developed with HTML, styled with Sass, Javascript, BEM methodology and React. Deployed with Firebase. Fully responsive.
 
 <a href="https://barbershop-web.web.app/">Link to the app firebase deployed</a>
 
